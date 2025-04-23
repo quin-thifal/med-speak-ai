@@ -1,3 +1,4 @@
+
 # MedSpeak AI Bridge - Healthcare Translation Web App
 
 ![App Screenshot](./screenshot.png)

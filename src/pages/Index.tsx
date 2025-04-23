@@ -15,15 +15,6 @@ const Index = () => {
         
         <InfoSection />
         <MedBridge />
-        
-        <footer className="mt-16 text-center text-sm text-muted-foreground">
-          <p className="mb-1">
-            Designed for healthcare professionals and patients to improve communication
-          </p>
-          <p>
-            Built with speech recognition and real-time translation technology
-          </p>
-        </footer>
       </div>
     </div>
   );
