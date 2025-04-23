@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from "react";
 import { speechRecognition } from "@/utils/speechRecognition";
 import { translator } from "@/utils/translator";
@@ -137,7 +138,7 @@ export const MedBridge: React.FC = () => {
     <div className="w-full max-w-4xl mx-auto p-4 space-y-6">
       <Card>
         <CardContent className="space-y-6">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <LanguageSelector
               selectedLanguage={sourceLanguage}
               onChange={(lang) => {
