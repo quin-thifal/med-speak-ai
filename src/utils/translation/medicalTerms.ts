@@ -1,3 +1,4 @@
+
 import { TranslationDict } from './types';
 
 export const medicalTerms: TranslationDict = {
@@ -35,7 +36,13 @@ export const medicalTerms: TranslationDict = {
       "should i": "debo",
       "take": "tomar",
       "this pill": "esta pastilla",
-      "when can i": "cuándo puedo"
+      "when can i": "cuándo puedo",
+      "track": "seguimiento de",
+      "medico": "médico",
+      "medical": "médico",
+      "records": "registros",
+      "medico records": "registros médicos",
+      "medical records": "registros médicos"
     },
     "fr": {
       "pain": "douleur",

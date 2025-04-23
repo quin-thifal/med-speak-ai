@@ -1,3 +1,4 @@
+
 import { TranslationDict } from './types';
 
 export const medicalPhrases: TranslationDict = {
@@ -18,7 +19,9 @@ export const medicalPhrases: TranslationDict = {
       "where is the hospital": "¿Dónde está el hospital?",
       "where is the pharmacy": "¿Dónde está la farmacia?",
       "i need water": "Necesito agua",
-      "i need to rest": "Necesito descansar"
+      "i need to rest": "Necesito descansar",
+      "track medico records": "Seguimiento de registros médicos",
+      "track medical records": "Seguimiento de registros médicos"
     },
     "fr": {
       "i want to report a stomach ache": "Je voudrais signaler des maux d'estomac",
