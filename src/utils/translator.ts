@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 
 export interface TranslationRequest {
@@ -51,7 +52,16 @@ export class Translator {
           "i am allergic to penicillin": "Soy alérgico a la penicilina",
           "i need help": "Necesito ayuda",
           "when can i take my medication": "¿Cuándo puedo tomar mi medicamento?",
-          "how often should i take this pill": "¿Con qué frecuencia debo tomar esta pastilla?"
+          "how often should i take this pill": "¿Con qué frecuencia debo tomar esta pastilla?",
+          "i need to see a doctor": "Necesito ver a un doctor",
+          "i feel dizzy": "Me siento mareado",
+          "i have a fever": "Tengo fiebre",
+          "i have chest pain": "Tengo dolor en el pecho",
+          "i need an ambulance": "Necesito una ambulancia",
+          "where is the hospital": "¿Dónde está el hospital?",
+          "where is the pharmacy": "¿Dónde está la farmacia?",
+          "i need water": "Necesito agua",
+          "i need to rest": "Necesito descansar"
         },
         "fr": {
           "i want to report a stomach ache": "Je voudrais signaler des maux d'estomac",
@@ -60,7 +70,16 @@ export class Translator {
           "i am allergic to penicillin": "Je suis allergique à la pénicilline",
           "i need help": "J'ai besoin d'aide",
           "when can i take my medication": "Quand puis-je prendre mon médicament?",
-          "how often should i take this pill": "À quelle fréquence dois-je prendre ce comprimé?"
+          "how often should i take this pill": "À quelle fréquence dois-je prendre ce comprimé?",
+          "i need to see a doctor": "J'ai besoin de voir un médecin",
+          "i feel dizzy": "Je me sens étourdi",
+          "i have a fever": "J'ai de la fièvre",
+          "i have chest pain": "J'ai une douleur à la poitrine",
+          "i need an ambulance": "J'ai besoin d'une ambulance",
+          "where is the hospital": "Où est l'hôpital?",
+          "where is the pharmacy": "Où est la pharmacie?",
+          "i need water": "J'ai besoin d'eau",
+          "i need to rest": "J'ai besoin de me reposer"
         },
         "de": {
           "i want to report a stomach ache": "Ich möchte Bauchschmerzen melden",
@@ -69,7 +88,16 @@ export class Translator {
           "i am allergic to penicillin": "Ich bin allergisch gegen Penicillin",
           "i need help": "Ich brauche Hilfe",
           "when can i take my medication": "Wann kann ich mein Medikament nehmen?",
-          "how often should i take this pill": "Wie oft soll ich diese Tablette einnehmen?"
+          "how often should i take this pill": "Wie oft soll ich diese Tablette einnehmen?",
+          "i need to see a doctor": "Ich muss einen Arzt aufsuchen",
+          "i feel dizzy": "Mir ist schwindelig",
+          "i have a fever": "Ich habe Fieber",
+          "i have chest pain": "Ich habe Brustschmerzen",
+          "i need an ambulance": "Ich brauche einen Krankenwagen",
+          "where is the hospital": "Wo ist das Krankenhaus?",
+          "where is the pharmacy": "Wo ist die Apotheke?",
+          "i need water": "Ich brauche Wasser",
+          "i need to rest": "Ich muss mich ausruhen"
         }
       }
     };
@@ -86,7 +114,7 @@ export class Translator {
           "allergy": "alergia",
           "prescription": "receta médica",
           "medication": "medicamento",
-          "doctor": "médico",
+          "doctor": "doctor",
           "hospital": "hospital",
           "pharmacy": "farmacia",
           "nurse": "enfermera",
@@ -96,7 +124,21 @@ export class Translator {
           "i want to": "quiero",
           "report": "reportar",
           "i have": "tengo",
-          "i need": "necesito"
+          "i need": "necesito",
+          "to see": "ver a",
+          "where is": "dónde está",
+          "see a doctor": "ver a un doctor",
+          "feel": "sentir",
+          "dizzy": "mareado",
+          "chest": "pecho",
+          "an ambulance": "una ambulancia",
+          "to rest": "descansar",
+          "water": "agua",
+          "how often": "con qué frecuencia",
+          "should i": "debo",
+          "take": "tomar",
+          "this pill": "esta pastilla",
+          "when can i": "cuándo puedo"
         },
         "fr": {
           "pain": "douleur",
@@ -117,7 +159,21 @@ export class Translator {
           "i want to": "je veux",
           "report": "rapporter",
           "i have": "j'ai",
-          "i need": "je n'ai pas"
+          "i need": "j'ai besoin de",
+          "to see": "voir",
+          "where is": "où est",
+          "see a doctor": "voir un médecin",
+          "feel": "me sens",
+          "dizzy": "étourdi",
+          "chest": "poitrine",
+          "an ambulance": "une ambulance",
+          "to rest": "me reposer",
+          "water": "eau",
+          "how often": "à quelle fréquence",
+          "should i": "dois-je",
+          "take": "prendre",
+          "this pill": "ce comprimé",
+          "when can i": "quand puis-je"
         },
         "de": {
           "pain": "Schmerz",
@@ -131,14 +187,28 @@ export class Translator {
           "doctor": "Arzt",
           "hospital": "Krankenhaus",
           "pharmacy": "Apotheke",
-          "nurse": "Arztin",
+          "nurse": "Krankenschwester",
           "symptom": "Symptom",
           "treatment": "Behandlung",
           "emergency": "Notfall",
           "i want to": "ich möchte",
           "report": "melden",
           "i have": "ich habe",
-          "i need": "ich brauche"
+          "i need": "ich brauche",
+          "to see": "aufsuchen",
+          "where is": "wo ist",
+          "see a doctor": "einen Arzt aufsuchen",
+          "feel": "fühle mich",
+          "dizzy": "schwindelig",
+          "chest": "Brust",
+          "an ambulance": "einen Krankenwagen",
+          "to rest": "ausruhen",
+          "water": "Wasser",
+          "how often": "wie oft",
+          "should i": "soll ich",
+          "take": "einnehmen",
+          "this pill": "diese Tablette",
+          "when can i": "wann kann ich"
         }
       }
     };
@@ -157,20 +227,25 @@ export class Translator {
     
     if (medicalTerms[sourceLanguage]?.[targetLanguage]) {
       const terms = medicalTerms[sourceLanguage][targetLanguage];
-      // First try multi-word terms
-      Object.entries(terms).forEach(([term, translation]) => {
-        if (term.includes(" ")) {
-          const regex = new RegExp(`\\b${term}\\b`, 'gi');
-          processedText = processedText.replace(regex, translation);
-        }
-      });
+      
+      // First try multi-word phrases (longer phrases first for better matching)
+      const multiWordTerms = Object.entries(terms)
+        .filter(([term]) => term.includes(" "))
+        .sort((a, b) => b[0].length - a[0].length); // Sort by length descending
+      
+      for (const [term, translation] of multiWordTerms) {
+        const regex = new RegExp(`\\b${term}\\b`, 'gi');
+        processedText = processedText.replace(regex, translation);
+      }
+      
       // Then try single words
-      Object.entries(terms).forEach(([term, translation]) => {
-        if (!term.includes(" ")) {
-          const regex = new RegExp(`\\b${term}\\b`, 'gi');
-          processedText = processedText.replace(regex, translation);
-        }
-      });
+      const singleWordTerms = Object.entries(terms)
+        .filter(([term]) => !term.includes(" "));
+      
+      for (const [term, translation] of singleWordTerms) {
+        const regex = new RegExp(`\\b${term}\\b`, 'gi');
+        processedText = processedText.replace(regex, translation);
+      }
     }
     
     // Default fallback if no better translation is available
