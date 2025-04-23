@@ -36,27 +36,41 @@ export class Translator {
   private mockTranslation(text: string, sourceLanguage: string, targetLanguage: string): TranslationResult {
     // In a real app, you would integrate with a translation API
     
-    // For demo purposes, let's fake some translations
-    const mockTranslations: Record<string, Record<string, string>> = {
+    // If source and target are the same, return the original text
+    if (sourceLanguage === targetLanguage) {
+      return { translatedText: text };
+    }
+    
+    // Medical phrases mock translations
+    const medicalPhrases: Record<string, Record<string, Record<string, string>>> = {
       "en": {
-        "es": "Este es un texto traducido al español.",
-        "fr": "C'est un texte traduit en français.",
-        "de": "Dies ist ein ins Deutsche übersetzter Text."
-      },
-      "es": {
-        "en": "This is text translated to English.",
-        "fr": "C'est un texte traduit en français.",
-        "de": "Dies ist ein ins Deutsche übersetzter Text."
-      },
-      "fr": {
-        "en": "This is text translated to English.",
-        "es": "Este es un texto traducido al español.",
-        "de": "Dies ist ein ins Deutsche übersetzter Text."
-      },
-      "de": {
-        "en": "This is text translated to English.",
-        "es": "Este es un texto traducido al español.",
-        "fr": "C'est un texte traduit en français.",
+        "es": {
+          "i want to report a stomach ache": "Quiero reportar un dolor de estómago",
+          "i have a headache": "Tengo dolor de cabeza",
+          "i need medication for pain": "Necesito medicamentos para el dolor",
+          "i am allergic to penicillin": "Soy alérgico a la penicilina",
+          "i need help": "Necesito ayuda",
+          "when can i take my medication": "¿Cuándo puedo tomar mi medicamento?",
+          "how often should i take this pill": "¿Con qué frecuencia debo tomar esta pastilla?"
+        },
+        "fr": {
+          "i want to report a stomach ache": "Je voudrais signaler des maux d'estomac",
+          "i have a headache": "J'ai mal à la tête",
+          "i need medication for pain": "J'ai besoin de médicaments contre la douleur",
+          "i am allergic to penicillin": "Je suis allergique à la pénicilline",
+          "i need help": "J'ai besoin d'aide",
+          "when can i take my medication": "Quand puis-je prendre mon médicament?",
+          "how often should i take this pill": "À quelle fréquence dois-je prendre ce comprimé?"
+        },
+        "de": {
+          "i want to report a stomach ache": "Ich möchte Bauchschmerzen melden",
+          "i have a headache": "Ich habe Kopfschmerzen",
+          "i need medication for pain": "Ich brauche Medikamente gegen Schmerzen",
+          "i am allergic to penicillin": "Ich bin allergisch gegen Penicillin",
+          "i need help": "Ich brauche Hilfe",
+          "when can i take my medication": "Wann kann ich mein Medikament nehmen?",
+          "how often should i take this pill": "Wie oft soll ich diese Tablette einnehmen?"
+        }
       }
     };
     
@@ -67,60 +81,135 @@ export class Translator {
           "pain": "dolor",
           "headache": "dolor de cabeza",
           "stomach": "estómago",
+          "stomach ache": "dolor de estómago",
           "fever": "fiebre",
           "allergy": "alergia",
           "prescription": "receta médica",
-          "medication": "medicamento"
+          "medication": "medicamento",
+          "doctor": "médico",
+          "hospital": "hospital",
+          "pharmacy": "farmacia",
+          "nurse": "enfermera",
+          "symptom": "síntoma",
+          "treatment": "tratamiento",
+          "emergency": "emergencia",
+          "i want to": "quiero",
+          "report": "reportar",
+          "i have": "tengo",
+          "i need": "necesito"
         },
         "fr": {
           "pain": "douleur",
           "headache": "mal de tête",
           "stomach": "estomac",
+          "stomach ache": "douleur du ventre",
           "fever": "fièvre",
           "allergy": "allergie",
           "prescription": "ordonnance",
-          "medication": "médicament"
+          "medication": "médicament",
+          "doctor": "médecin",
+          "hospital": "hôpital",
+          "pharmacy": "pharmacie",
+          "nurse": "infirmière",
+          "symptom": "symptôme",
+          "treatment": "traitement",
+          "emergency": "urgence",
+          "i want to": "je veux",
+          "report": "rapporter",
+          "i have": "j'ai",
+          "i need": "je n'ai pas"
         },
         "de": {
           "pain": "Schmerz",
           "headache": "Kopfschmerzen",
           "stomach": "Magen",
+          "stomach ache": "Bauchschmerzen",
           "fever": "Fieber",
           "allergy": "Allergie",
           "prescription": "Rezept",
-          "medication": "Medikament"
+          "medication": "Medikament",
+          "doctor": "Arzt",
+          "hospital": "Krankenhaus",
+          "pharmacy": "Apotheke",
+          "nurse": "Arztin",
+          "symptom": "Symptom",
+          "treatment": "Behandlung",
+          "emergency": "Notfall",
+          "i want to": "ich möchte",
+          "report": "melden",
+          "i have": "ich habe",
+          "i need": "ich brauche"
         }
       }
     };
     
-    // If source and target are the same, return the original text
-    if (sourceLanguage === targetLanguage) {
-      return { translatedText: text };
+    // Check if we have an exact phrase match
+    const lowerText = text.toLowerCase();
+    if (medicalPhrases[sourceLanguage]?.[targetLanguage]?.[lowerText]) {
+      return {
+        translatedText: medicalPhrases[sourceLanguage][targetLanguage][lowerText],
+        detectedLanguage: sourceLanguage
+      };
     }
     
-    // Process the text for medical terms first
+    // If no exact phrase match, try to translate word by word
     let processedText = text;
+    
     if (medicalTerms[sourceLanguage]?.[targetLanguage]) {
       const terms = medicalTerms[sourceLanguage][targetLanguage];
+      // First try multi-word terms
       Object.entries(terms).forEach(([term, translation]) => {
-        const regex = new RegExp(`\\b${term}\\b`, 'gi');
-        processedText = processedText.replace(regex, translation);
+        if (term.includes(" ")) {
+          const regex = new RegExp(`\\b${term}\\b`, 'gi');
+          processedText = processedText.replace(regex, translation);
+        }
+      });
+      // Then try single words
+      Object.entries(terms).forEach(([term, translation]) => {
+        if (!term.includes(" ")) {
+          const regex = new RegExp(`\\b${term}\\b`, 'gi');
+          processedText = processedText.replace(regex, translation);
+        }
       });
     }
     
-    // For demo, if we have a mock translation for this language pair, return it
-    // Otherwise, prefix with a note that it's a mock
-    if (mockTranslations[sourceLanguage]?.[targetLanguage]) {
-      return { 
-        translatedText: mockTranslations[sourceLanguage][targetLanguage],
-        detectedLanguage: sourceLanguage
-      };
-    } else {
-      return { 
-        translatedText: `[Translated from ${sourceLanguage} to ${targetLanguage}]: ${processedText}`,
+    // Default fallback if no better translation is available
+    const defaultTranslations: Record<string, Record<string, string>> = {
+      "en": {
+        "es": "Lo siento, no puedo traducir esto correctamente.",
+        "fr": "Désolé, je ne peux pas traduire cela correctement.",
+        "de": "Es tut mir leid, ich kann das nicht richtig übersetzen."
+      },
+      "es": {
+        "en": "Sorry, I cannot translate this correctly.",
+        "fr": "Désolé, je ne peux pas traduire cela correctement.",
+        "de": "Es tut mir leid, ich kann das nicht richtig übersetzen."
+      },
+      "fr": {
+        "en": "Sorry, I cannot translate this correctly.",
+        "es": "Lo siento, no puedo traducir esto correctamente.",
+        "de": "Es tut mir leid, ich kann das nicht richtig übersetzen."
+      },
+      "de": {
+        "en": "Sorry, I cannot translate this correctly.",
+        "es": "Lo siento, no puedo traducir esto correctamente.",
+        "fr": "Désolé, je ne peux pas traduire cela correctement."
+      }
+    };
+    
+    // If we couldn't translate it properly through our word-by-word approach
+    if (processedText === text) {
+      return {
+        translatedText: defaultTranslations[sourceLanguage]?.[targetLanguage] || 
+          `[${sourceLanguage} to ${targetLanguage}]: ${text}`,
         detectedLanguage: sourceLanguage
       };
     }
+    
+    return {
+      translatedText: processedText,
+      detectedLanguage: sourceLanguage
+    };
   }
 }
 
