@@ -17,19 +17,11 @@ A real-time multilingual translation platform designed specifically for healthca
 ## Supported Languages
 
 🇬🇧 English | 🇪🇸 Spanish | 🇫🇷 French | 🇩🇪 German  
-🇨🇳 Mandarin | 🇦🇪 Arabic | 🇵🇹 Portuguese | 🇷🇺 Russian  
-🇯🇵 Japanese | 🇮🇳 Hindi | 🇮🇩 Bahasa | 🇮🇹 Italian
+🇨🇳 Chinese | 🇯🇵 Japanese | 🇦🇪 Arabic | 🇵🇹 Portuguese  
+🇷🇺 Russian | 🇮🇳 Hindi | 🇮🇹 Italian | 🇰🇷 Korean  
 
-## Technical Stack
-
-**Frontend**  
-[![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-blue)](https://tailwindcss.com/)
-
-**AI Services**  
-[![Web Speech API](https://img.shields.io/badge/Web_Speech_API-NA-yellowgreen)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow)](https://huggingface.co/)
+### Specialized Dialects
+🗣️ Cantonese (Traditional Chinese)  
 
 ## Usage Guide
 
