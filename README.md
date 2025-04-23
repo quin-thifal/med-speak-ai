@@ -1,7 +1,7 @@
 
 # MedSpeak AI Bridge - Healthcare Translation Web App
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](./med-speak-ai-bridge.png)
 
 A real-time multilingual translation platform designed specifically for healthcare providers to communicate with patients across language barriers, with specialized support for medical terminology.
 
