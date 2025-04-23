@@ -7,12 +7,11 @@ A real-time multilingual translation platform designed specifically for healthca
 
 ## Key Features
 
-- **Accurate Speech-to-Text**: Real-time transcription with medical term recognition
-- **AI-Powered Translation**: Specialized medical translations in 12 languages
-- **Dual Interface**: Side-by-side original/translated text display
-- **Audio Playback**: Listen to translations in native pronunciation
-- **Secure & Private**: All processing happens client-side (optional server enhancement)
-- **Mobile-Optimized**: Fully responsive for clinic or bedside use
+- **Accurate Speech-to-Text**: Real-time transcription with medical term recognition.
+- **AI-Powered Translation**: Specialized medical translations in 12 languages.
+- **Dual Interface**: Side-by-side original/translated text display.
+- **Audio Playback**: Listen to translations in native pronunciation.
+- **Mobile-Optimized**: Fully responsive for clinic or bedside use.
 
 ## Supported Languages
 
@@ -23,11 +22,11 @@ A real-time multilingual translation platform designed specifically for healthca
 ## Usage Guide
 
 1. **Recording**:
-   - Click the microphone icon to start speaking
-   - Select input language from dropdown
+   - Click the microphone icon to start speaking.
+   - Select input language from dropdown.
 
 2. **Translation**:
-   - Select target language from dropdown
+   - Select target language from dropdown.
 
 3. **Playback**:
-   - Click the speaker icon to hear the translation
+   - Click the speaker icon to hear the translation.
