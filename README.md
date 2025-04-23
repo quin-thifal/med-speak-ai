@@ -1,45 +1,83 @@
-# MedSpeak AI Bridge - Healthcare Translation Web App
+# Healthcare Translation Assistant
 
-![App Screenshot](./screenshot.png)
+A web-based application that enables real-time, multilingual translation between patients and healthcare providers. The application converts spoken input into text, provides a live transcript, and offers translated versions with audio playback.
 
-A real-time multilingual translation platform designed specifically for healthcare providers to communicate with patients across language barriers, with specialized support for medical terminology.
+## Features
 
-## Key Features
-
-- **Accurate Speech-to-Text**: Real-time transcription with medical term recognition
-- **AI-Powered Translation**: Specialized medical translations in 12 languages
-- **Dual Interface**: Side-by-side original/translated text display
-- **Audio Playback**: Listen to translations in native pronunciation
-- **Secure & Private**: All processing happens client-side (optional server enhancement)
-- **Mobile-Optimized**: Fully responsive for clinic or bedside use
-
-## Supported Languages
-
-🇬🇧 English | 🇪🇸 Spanish | 🇫🇷 French | 🇩🇪 German  
-🇨🇳 Mandarin | 🇦🇪 Arabic | 🇵🇹 Portuguese | 🇷🇺 Russian  
-🇯🇵 Japanese | 🇮🇳 Hindi | 🇮🇩 Bahasa | 🇮🇹 Italian
+- Real-time speech-to-text conversion
+- Multilingual translation support
+- Audio playback of translated text
+- Mobile-responsive design
+- Support for multiple languages:
+  - English (US)
+  - Spanish
+  - French
+  - German
+  - Chinese
+  - Arabic
 
 ## Technical Stack
 
-**Frontend**  
-[![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-blue)](https://tailwindcss.com/)
+- React with TypeScript
+- Vite for build tooling
+- Tailwind CSS for styling
+- Web Speech API for speech recognition
+- Radix UI components for accessible UI elements
 
-**AI Services**  
-[![Web Speech API](https://img.shields.io/badge/Web_Speech_API-NA-yellowgreen)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow)](https://huggingface.co/)
+## Getting Started
 
-## Usage Guide
+### Prerequisites
 
-1. **Recording**:
-   - Click the microphone icon to start speaking
-   - The app automatically detects the input language
+- Node.js (v14 or higher)
+- npm or yarn
 
-2. **Translation**:
-   - Select target language from dropdown
-   - Medical terms are highlighted in both transcripts
+### Installation
 
-3. **Playback**:
-   - Click the speaker icon to hear the translation
-   - Adjust playback speed in settings
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/healthcare-translation-assistant.git
+cd healthcare-translation-assistant
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Usage
+
+1. Select your input language (the language you will speak in)
+2. Select your output language (the language you want to translate to)
+3. Click "Start Recording" to begin speech recognition
+4. Speak clearly into your microphone
+5. View the real-time transcription and translation
+6. Click "Speak Translation" to hear the translated text
+
+## Browser Support
+
+This application uses the Web Speech API, which is supported in:
+- Chrome (desktop and Android)
+- Edge
+- Safari (desktop and iOS)
+- Firefox
+
+## Security and Privacy
+
+- All speech recognition and translation happens in the browser
+- No audio data is sent to external servers
+- No personal data is stored
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
