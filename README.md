@@ -20,19 +20,14 @@ A real-time multilingual translation platform designed specifically for healthca
 🇨🇳 Chinese | 🇯🇵 Japanese | 🇦🇪 Arabic | 🇵🇹 Portuguese  
 🇷🇺 Russian | 🇮🇳 Hindi | 🇮🇹 Italian | 🇰🇷 Korean  
 
-### Specialized Dialects
-🗣️ Cantonese (Traditional Chinese)  
-
 ## Usage Guide
 
 1. **Recording**:
    - Click the microphone icon to start speaking
-   - The app automatically detects the input language
+   - Select input language from dropdown
 
 2. **Translation**:
    - Select target language from dropdown
-   - Medical terms are highlighted in both transcripts
 
 3. **Playback**:
    - Click the speaker icon to hear the translation
-   - Adjust playback speed in settings
