@@ -16,7 +16,12 @@ class MedicalTerminologyService {
         'de': 'Hypertonie',
         'zh': '高血压',
         'ar': 'ارتفاع ضغط الدم',
-        'ja': '高血圧'
+        'ja': '高血圧',
+        'pt': 'hipertensão',
+        'ru': 'гипертония',
+        'hi': 'उच्च रक्तचाप',
+        'it': 'ipertensione',
+        'ko': '고혈압'
       },
       description: "High blood pressure condition"
     },
@@ -29,7 +34,12 @@ class MedicalTerminologyService {
         'de': 'Diabetes',
         'zh': '糖尿病',
         'ar': 'مرض السكري',
-        'ja': '糖尿病'
+        'ja': '糖尿病',
+        'pt': 'diabetes',
+        'ru': 'диабет',
+        'hi': 'मधुमेह',
+        'it': 'diabete',
+        'ko': '당뇨병'
       },
       description: "Metabolic disorder affecting blood sugar levels"
     },
@@ -42,7 +52,12 @@ class MedicalTerminologyService {
         'de': 'Lungenentzündung',
         'zh': '肺炎',
         'ar': 'الالتهاب الرئوي',
-        'ja': '肺炎'
+        'ja': '肺炎',
+        'pt': 'pneumonia',
+        'ru': 'пневмония',
+        'hi': 'निमोनिया',
+        'it': 'polmonite',
+        'ko': '폐렴'
       },
       description: "Infection causing inflammation of the lungs"
     },
@@ -55,7 +70,12 @@ class MedicalTerminologyService {
         'de': 'Arthritis',
         'zh': '关节炎',
         'ar': 'التهاب المفاصل',
-        'ja': '関節炎'
+        'ja': '関節炎',
+        'pt': 'artrite',
+        'ru': 'артрит',
+        'hi': 'गठिया',
+        'it': 'artrite',
+        'ko': '관절염'
       },
       description: "Inflammation of joints causing pain and stiffness"
     },
@@ -68,7 +88,12 @@ class MedicalTerminologyService {
         'de': 'Magenschleimhautentzündung',
         'zh': '胃炎',
         'ar': 'التهاب المعدة',
-        'ja': '胃炎'
+        'ja': '胃炎',
+        'pt': 'gastrite',
+        'ru': 'гастрит',
+        'hi': 'गैस्ट्राइटिस',
+        'it': 'gastrite',
+        'ko': '위염'
       },
       description: "Inflammation of the stomach lining"
     },
@@ -81,7 +106,12 @@ class MedicalTerminologyService {
         'de': 'Bronchitis',
         'zh': '支气管炎',
         'ar': 'التهاب الشعب الهوائية',
-        'ja': '気管支炎'
+        'ja': '気管支炎',
+        'pt': 'bronquite',
+        'ru': 'бронхит',
+        'hi': 'ब्रोंकाइटिस',
+        'it': 'bronchite',
+        'ko': '기관지염'
       },
       description: "Inflammation of the bronchial tubes"
     },
@@ -94,7 +124,12 @@ class MedicalTerminologyService {
         'de': 'Migräne',
         'zh': '偏头痛',
         'ar': 'الصداع النصفي',
-        'ja': '片頭痛'
+        'ja': '片頭痛',
+        'pt': 'enxaqueca',
+        'ru': 'мигрень',
+        'hi': 'माइग्रेन',
+        'it': 'emicrania',
+        'ko': '편두통'
       },
       description: "Severe recurring headache with additional symptoms"
     },
@@ -107,7 +142,12 @@ class MedicalTerminologyService {
         'de': 'Anämie',
         'zh': '贫血',
         'ar': 'فقر الدم',
-        'ja': '貧血'
+        'ja': '貧血',
+        'pt': 'anemia',
+        'ru': 'анемия',
+        'hi': 'एनीमिया',
+        'it': 'anemia',
+        'ko': '빈혈'
       },
       description: "Condition with insufficient healthy red blood cells"
     },
@@ -120,7 +160,12 @@ class MedicalTerminologyService {
         'de': 'Hypothyreose',
         'zh': '甲状腺功能减退',
         'ar': 'قصور الغدة الدرقية',
-        'ja': '甲状腺機能低下症'
+        'ja': '甲状腺機能低下症',
+        'pt': 'hipotireoidismo',
+        'ru': 'гипотиреоз',
+        'hi': 'हाइपोथायरायडिज्म',
+        'it': 'ipotiroidismo',
+        'ko': '갑상선 기능 저하증'
       },
       description: "Underactive thyroid gland condition"
     },
@@ -133,7 +178,12 @@ class MedicalTerminologyService {
         'de': 'Osteoporose',
         'zh': '骨质疏松',
         'ar': 'هشاشة العظام',
-        'ja': '骨粗しょう症'
+        'ja': '骨粗しょう症',
+        'pt': 'osteoporose',
+        'ru': 'остеопороз',
+        'hi': 'ऑस्टियोपोरोसिस',
+        'it': 'osteoporosi',
+        'ko': '골다공증'
       },
       description: "Condition where bones become weak and brittle"
     }
