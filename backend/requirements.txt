@@ -1,0 +1,4 @@
+SpeechRecognition==3.10.0
+cryptography==41.0.7
+PyAudio==0.2.14
+typing-extensions==4.9.0 
