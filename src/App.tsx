@@ -30,7 +30,13 @@ function App() {
     { code: 'fr-FR', name: 'French' },
     { code: 'de-DE', name: 'German' },
     { code: 'zh-CN', name: 'Chinese' },
+    { code: 'ja-JP', name: 'Japanese' },
     { code: 'ar-SA', name: 'Arabic' },
+    { code: 'pt-PT', name: 'Portuguese' },
+    { code: 'ru-RU', name: 'Russian' },
+    { code: 'hi-IN', name: 'Hindi' },
+    { code: 'it-IT', name: 'Italian' },
+    { code: 'ko-KR', name: 'Korean' }
   ];
 
   useEffect(() => {
